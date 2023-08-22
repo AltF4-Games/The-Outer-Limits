@@ -8,21 +8,35 @@ public class Pilot : MonoBehaviour
     public Transform pilotCameraRoot;
     public Transform playerCameraRoot;
     public CinemachineVirtualCamera cinemachineVirtualCamera;
-    public CameraShake shake;
-    public ParticleSystem particleSystem;
+    public SpaceshipMovement movement;
+    public StarterAssets.FirstPersonController controller;
+    public KeyCode key = KeyCode.Escape;
+    private bool inSeat = false;
 
     public void SwitchViews(bool val)
     {
         if(val) {
             cinemachineVirtualCamera.Follow = pilotCameraRoot;
-            shake.ShakeCamera(3f,true);
-            particleSystem.Play();
+            inSeat = true;
+            movement.enabled = true;
+            controller.enabled = false;
         } 
         else {
+            controller.enabled = true;
             cinemachineVirtualCamera.Follow = playerCameraRoot;
-            shake.ShakeCamera(0,false);
-            particleSystem.Stop();
+            inSeat = false;
+            movement.enabled = false;
         }
+    }
 
+    private void Update()
+    {
+        if(inSeat) 
+        {
+            if(Input.GetKey(key)) 
+            {
+                SwitchViews(false);
+            }
+        }
     }
 }
