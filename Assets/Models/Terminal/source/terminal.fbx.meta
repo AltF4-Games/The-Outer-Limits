@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7877315e4e560145a2cd9a74082ba40
+guid: 11970a5ac2bc4094fa90bf49b8ac4d78
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 659fb23d3ff73df48b07727ccc87fc0b, type: 2}
+      name: Terminal
+    second: {fileID: 2100000, guid: 207a072c571ce80468c55550fea7bbb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Terminal_screen
+    second: {fileID: 2100000, guid: 89df7a07c7367964894b9d44d4db241b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +45,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -95,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.001
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

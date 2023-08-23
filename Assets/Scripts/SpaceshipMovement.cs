@@ -19,7 +19,7 @@ public class SpaceshipMovement : MonoBehaviour
     private Vector3 previousPosition;
     private float currentRotationSpeed = 0.0f;
     private Vector3 velocity = Vector3.zero;
-    private bool autoPilotOn = false;
+    [HideInInspector] public bool autoPilotOn = false;
     [HideInInspector] public bool canDrive = false;
 
     void Start()
@@ -68,7 +68,7 @@ public class SpaceshipMovement : MonoBehaviour
             particleSystem.Stop();
         }
 
-        if(Input.GetKeyDown(autoPilotKey))
+        if(Input.GetKeyDown(autoPilotKey) && canDrive == true)
         {
             autoPilotOn = !autoPilotOn;
         }

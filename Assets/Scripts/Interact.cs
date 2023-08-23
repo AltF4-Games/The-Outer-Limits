@@ -21,6 +21,18 @@ public class Interact : MonoBehaviour
                 {
                     hit.collider.GetComponent<Pilot>().SwitchViews(true);
                 }
+                if(hit.collider.gameObject.CompareTag("AntiGrav"))
+                {
+                    hit.collider.GetComponent<AntiGravity>().ToggleGravity();
+                }
+                if(hit.collider.gameObject.CompareTag("Oxygen"))
+                {
+                    hit.collider.GetComponent<Oxygen>().ToggleOxygen();
+                }
+                if(hit.collider.gameObject.CompareTag("Valve"))
+                {
+                    hit.collider.GetComponent<Pressure>().RotateValve();
+                }
             }
         }
         else
