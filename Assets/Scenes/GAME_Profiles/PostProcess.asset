@@ -92,7 +92,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   tint:
-    overrideState: 1
+    overrideState: 0
     value: 0
   colorFilter:
     overrideState: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 1
+    overrideState: 0
     value: 0.5
   contrast:
     overrideState: 0
@@ -1415,7 +1415,7 @@ MonoBehaviour:
     value: 1
   preset:
     overrideState: 1
-    value: 4
+    value: 3
   maximumIterationCount:
     overrideState: 0
     value: 16
@@ -1482,7 +1482,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.34
+    value: 0.425
   smoothness:
     overrideState: 0
     value: 0.2

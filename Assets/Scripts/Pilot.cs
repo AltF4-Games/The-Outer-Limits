@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+[RequireComponent (typeof (Interactable))]
 public class Pilot : MonoBehaviour
 {
     public Transform pilotCameraRoot;
@@ -10,6 +11,8 @@ public class Pilot : MonoBehaviour
     public CinemachineVirtualCamera cinemachineVirtualCamera;
     public SpaceshipMovement movement;
     public StarterAssets.FirstPersonController controller;
+    public Interact interact;
+    public GameObject canvas;
     public KeyCode key = KeyCode.Escape;
     private bool inSeat = false;
 
@@ -18,14 +21,18 @@ public class Pilot : MonoBehaviour
         if(val) {
             cinemachineVirtualCamera.Follow = pilotCameraRoot;
             inSeat = true;
-            movement.enabled = true;
+            movement.canDrive = true;
             controller.enabled = false;
+            interact.enabled = false;
+            canvas.SetActive(false);
         } 
         else {
             controller.enabled = true;
             cinemachineVirtualCamera.Follow = playerCameraRoot;
             inSeat = false;
-            movement.enabled = false;
+            movement.canDrive = false;
+            canvas.SetActive(true);
+            interact.enabled = true;
         }
     }
 

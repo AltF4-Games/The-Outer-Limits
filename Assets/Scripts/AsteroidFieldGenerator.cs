@@ -24,7 +24,8 @@ public class AsteroidFieldGenerator : MonoBehaviour
                 Random.Range(-fieldSize.z / 2, fieldSize.z / 2)
             );
             GameObject asteroidPrefab = asteroidPrefabs[Random.Range(0,asteroidPrefabs.Length)];
-            Instantiate(asteroidPrefab, randomPosition, Quaternion.identity,transform);
+            GameObject go = Instantiate(asteroidPrefab, randomPosition, Quaternion.identity,transform);
+            go.name = "Asteroid";
         }
     }
 
