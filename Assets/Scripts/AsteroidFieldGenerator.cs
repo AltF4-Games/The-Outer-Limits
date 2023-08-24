@@ -5,6 +5,7 @@ using UnityEngine;
 public class AsteroidFieldGenerator : MonoBehaviour
 {
     public GameObject[] asteroidPrefabs;
+    public Vector3 asteroidSize = new Vector3(10,10,10);
     public Vector3 fieldSize = new Vector3(100, 100, 100);
     public int asteroidCount = 100;
 
@@ -26,6 +27,7 @@ public class AsteroidFieldGenerator : MonoBehaviour
             GameObject asteroidPrefab = asteroidPrefabs[Random.Range(0,asteroidPrefabs.Length)];
             GameObject go = Instantiate(asteroidPrefab, randomPosition, Quaternion.identity,transform);
             go.name = "Asteroid";
+            go.transform.localScale = asteroidSize;
         }
     }
 

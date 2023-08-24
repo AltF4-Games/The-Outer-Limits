@@ -62,7 +62,7 @@ public class Pressure : MonoBehaviour
             yield return null;
         }
 
-        transform.rotation = Quaternion.Euler(0f, -180f, endRotation);
+        //transform.rotation = Quaternion.Euler(0f, -180f, endRotation);
         isRotating = false;
     }
 }
