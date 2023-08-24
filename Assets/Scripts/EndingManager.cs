@@ -46,4 +46,19 @@ public class EndingManager : MonoBehaviour
         yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void Crashed(string deathMessage)
+    {
+        StartCoroutine(CrashedEnum(deathMessage));
+    }
+
+    private IEnumerator CrashedEnum(string deathMessage)
+    {
+        AudioManager.instance.PlayAudio(explosionSoundFX,1.0f);
+        yield return new WaitForSeconds(.3f);
+        blackScreen.SetActive(true);
+        endingText.text = deathMessage;
+        yield return new WaitForSeconds(6f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
