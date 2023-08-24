@@ -9,12 +9,14 @@ public class RandomEventGenerator : MonoBehaviour
     public Oxygen oxygen; // 2
     public AntiGravity antiGravity; // 3
     public Pressure pressure; // 4
-    public AudioClip[] clips; //5
-    public FireGenerator fireGenerator;
+    public AudioClip[] clips; // 5
+    public FireGenerator fireGenerator; // 6
+    public RandomObstacles randomObstacles; // 7
 
     private void Start ()
     {
         StartCoroutine(REG());
+        StartCoroutine(RandomNoises());
     }  
 
     private IEnumerator REG()
@@ -40,16 +42,24 @@ public class RandomEventGenerator : MonoBehaviour
                 pressure.canDecreaseCount = true;
                 break;
             case 5:
-                int randomClip = Random.Range(0,clips.Length);
-                AudioManager.instance.PlayAudio(clips[randomClip],1.0f);
+                fireGenerator.GenerateFire();
                 break;
             case 6:
-                fireGenerator.GenerateFire();
+                randomObstacles.SpawnRandomObstacle(15f);
                 break;
             default:
                 break;
         }
         StartCoroutine(REG());
+    }
+
+    private IEnumerator RandomNoises()
+    {
+        float random = Random.Range(timeInterval.x,timeInterval.y);
+        yield return new WaitForSeconds(random);
+        int randomClip = Random.Range(0,clips.Length);
+        AudioManager.instance.PlayAudio(clips[randomClip],1.0f);
+        StartCoroutine(RandomNoises());
     }
 
 }

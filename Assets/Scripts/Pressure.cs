@@ -36,6 +36,7 @@ public class Pressure : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         m_Pressure-=0.4f;
         if(m_Pressure <= 1.2f) {
+            EndingManager.instance.DeathDueToSuffocation("YOU DIED\n DUE TO A EXPLOSION CAUSED BY LOW PRESSURE");
             Debug.Log("Lmao Ded, by too low pressure");
         }
         pressureText.text = "Pressure Inside : " + m_Pressure + " psi";
