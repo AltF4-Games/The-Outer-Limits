@@ -33,6 +33,10 @@ public class Interact : MonoBehaviour
                 {
                     hit.collider.GetComponent<Pressure>().RotateValve();
                 }
+                if(hit.collider.gameObject.CompareTag("Extinguisher"))
+                {
+                    hit.collider.GetComponent<FireExtinguisher>().InteractWithExt();
+                }
             }
         }
         else

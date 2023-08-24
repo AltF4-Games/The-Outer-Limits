@@ -10,6 +10,7 @@ TagManager:
   - AntiGrav
   - Oxygen
   - Valve
+  - Extinguisher
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - PostProcess
   - Interact
-  - 
+  - Fire
   - 
   - 
   - 

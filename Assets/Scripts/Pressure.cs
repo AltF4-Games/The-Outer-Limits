@@ -21,6 +21,7 @@ public class Pressure : MonoBehaviour
     {
         StartCoroutine(Rotate360Degrees());
         AudioManager.instance.PlayAudio(squeak,1f);
+        canDecreaseCount = false;
         m_Pressure = 14.696f;
         pressureText.text = "Pressure Inside : " + m_Pressure + " psi"; 
     }
