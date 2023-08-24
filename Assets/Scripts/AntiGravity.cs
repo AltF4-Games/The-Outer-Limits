@@ -6,11 +6,13 @@ public class AntiGravity : MonoBehaviour
     // Artificial Gravity Generators
     public StarterAssets.FirstPersonController player;
     public TextMeshProUGUI antiGravText;
+    public AudioClip buttonPress;
     private bool isGravFlipped = false;
 
     public void ToggleGravity()
     {
         isGravFlipped = !isGravFlipped;
+        AudioManager.instance.PlayAudio(buttonPress,1.0f);
         if(isGravFlipped) TurnOffGravity();
         else TurnOnGravity();
     }

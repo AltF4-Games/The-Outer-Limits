@@ -10,6 +10,7 @@ public class Oxygen : MonoBehaviour
     public Image oxygen_bar;
     public PostProcessProfile profile;
     public AudioClip wheeze;
+    public AudioClip buttonPress;
     public TextMeshProUGUI oxygenText;
     public bool canDecreaseCount = false;
     private Vignette vignette;
@@ -28,6 +29,7 @@ public class Oxygen : MonoBehaviour
     public void ToggleOxygen()
     {
         canDecreaseCount = !canDecreaseCount;
+        AudioManager.instance.PlayAudio(buttonPress,1.0f);
     }
 
     private IEnumerator OxygenCount()

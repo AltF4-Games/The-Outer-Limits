@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace StarterAssets
 {
+	[RequireComponent(typeof(FootstepManager))]
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM
 	[RequireComponent(typeof(PlayerInput))]
@@ -59,6 +60,7 @@ namespace StarterAssets
 		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
+		private FootstepManager footstepManager;
 
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -97,6 +99,7 @@ namespace StarterAssets
 
 		private void Start()
 		{
+			footstepManager = GetComponent<FootstepManager>();
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM
@@ -177,6 +180,7 @@ namespace StarterAssets
 
 				// round speed to 3 decimal places
 				_speed = Mathf.Round(_speed * 1000f) / 1000f;
+				footstepManager.PlayFootstepSound();
 			}
 			else
 			{

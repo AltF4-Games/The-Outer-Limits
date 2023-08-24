@@ -16,6 +16,7 @@ public class SpaceshipMovement : MonoBehaviour
     private KeyCode autoPilotKey = KeyCode.CapsLock;
     public Transform player;
 
+    private AudioSource audioSource;
     private Vector3 previousPosition;
     private float currentRotationSpeed = 0.0f;
     private Vector3 velocity = Vector3.zero;
@@ -25,6 +26,7 @@ public class SpaceshipMovement : MonoBehaviour
     void Start()
     {
         previousPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -60,12 +62,16 @@ public class SpaceshipMovement : MonoBehaviour
         {
             shake.ShakeCamera(0.7f,true);
             if(!particleSystem.isPlaying)
+            {
                 particleSystem.Play();
+                audioSource.Play();
+            }
         }
         else
         {
             shake.ShakeCamera(2f,false);
             particleSystem.Stop();
+            audioSource.Stop();
         }
 
         if(Input.GetKeyDown(autoPilotKey) && canDrive == true)

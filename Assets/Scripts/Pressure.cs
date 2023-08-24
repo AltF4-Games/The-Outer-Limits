@@ -6,7 +6,7 @@ using TMPro;
 public class Pressure : MonoBehaviour
 {
     private float rotationSpeed = 180f;
-    public float m_Pressure = 1.0f;
+    public float m_Pressure = 14.696f;
     public AudioClip squeak;
     public TextMeshProUGUI pressureText;
     private bool isRotating = false;
@@ -21,8 +21,8 @@ public class Pressure : MonoBehaviour
     {
         StartCoroutine(Rotate360Degrees());
         AudioManager.instance.PlayAudio(squeak,1f);
-        m_Pressure = 1.0f;
-        pressureText.text = "Pressure Inside : " + m_Pressure + " ATM"; 
+        m_Pressure = 14.696f;
+        pressureText.text = "Pressure Inside : " + m_Pressure + " psi"; 
     }
 
     private IEnumerator IncreasePressure()
@@ -33,11 +33,11 @@ public class Pressure : MonoBehaviour
             yield break;
         }
         yield return new WaitForSeconds(1.5f);
-        m_Pressure-=0.04f;
-        if(m_Pressure <= 0.12f) {
+        m_Pressure-=0.4f;
+        if(m_Pressure <= 1.2f) {
             Debug.Log("Lmao Ded, by too low pressure");
         }
-        pressureText.text = "Pressure Inside : " + m_Pressure + " ATM";
+        pressureText.text = "Pressure Inside : " + m_Pressure + " psi";
         StartCoroutine(IncreasePressure());
     }
 
@@ -51,7 +51,7 @@ public class Pressure : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        while (elapsedTime < .5f)
+        while (elapsedTime < 2f)
         {
             float rotationAmount = Mathf.Lerp(startRotation, endRotation, elapsedTime / 2f);
             transform.rotation = Quaternion.Euler(0f, -180f, rotationAmount);
