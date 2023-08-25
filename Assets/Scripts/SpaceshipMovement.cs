@@ -14,7 +14,6 @@ public class SpaceshipMovement : MonoBehaviour
     public ParticleSystem particleSystem;
     public TextMeshProUGUI coordText;
     private KeyCode autoPilotKey = KeyCode.CapsLock;
-    public Transform player;
 
     private AudioSource audioSource;
     private Vector3 previousPosition;
@@ -42,7 +41,6 @@ public class SpaceshipMovement : MonoBehaviour
 
         if(autoPilotOn) {
             movement = new Vector3(-1, 0, 0) * autoPilotSpeed * Time.deltaTime;
-            //player.GetComponent<CharacterController>().Move(movement);
         }
 
         transform.Translate(movement);
@@ -60,7 +58,8 @@ public class SpaceshipMovement : MonoBehaviour
 
         if(velocity.magnitude > 1)
         {
-            shake.ShakeCamera(0.7f,true);
+            if(shake != null)
+                shake.ShakeCamera(0.7f,true);
             if(!particleSystem.isPlaying)
             {
                 particleSystem.Play();
@@ -69,7 +68,8 @@ public class SpaceshipMovement : MonoBehaviour
         }
         else
         {
-            shake.ShakeCamera(2f,false);
+            if(shake != null)
+                shake.ShakeCamera(2f,false);
             particleSystem.Stop();
             audioSource.Stop();
         }

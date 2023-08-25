@@ -13,7 +13,6 @@ public class Pilot : MonoBehaviour
     public SpaceshipMovement movement;
     public StarterAssets.FirstPersonController controller;
     public Interact interact;
-    public GameObject canvas;
     public TextMeshProUGUI subText;
     public KeyCode key = KeyCode.Escape;
     private bool inSeat = false;
@@ -26,7 +25,6 @@ public class Pilot : MonoBehaviour
             movement.canDrive = true;
             controller.enabled = false;
             interact.enabled = false;
-            canvas.SetActive(false);
         } 
         else {
             if(movement.autoPilotOn == true){
@@ -38,7 +36,6 @@ public class Pilot : MonoBehaviour
             cinemachineVirtualCamera.Follow = playerCameraRoot;
             inSeat = false;
             movement.canDrive = false;
-            canvas.SetActive(true);
             interact.enabled = true;
         }
     }
@@ -56,14 +53,8 @@ public class Pilot : MonoBehaviour
 
     private IEnumerator AutoPilotHelp()
     {
-        canvas.SetActive(true);
-        canvas.transform.GetChild(0).gameObject.SetActive(false);
-        canvas.transform.GetChild(1).gameObject.SetActive(false);
         subText.text = "You can't leave your seat while Auto Pilot is ON!";
         yield return new WaitForSeconds(3f);
         subText.text = "";
-        canvas.SetActive(false);
-        canvas.transform.GetChild(0).gameObject.SetActive(true);
-        canvas.transform.GetChild(1).gameObject.SetActive(true);
     }
 }

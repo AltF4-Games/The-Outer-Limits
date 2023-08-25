@@ -39,10 +39,10 @@ public class Oxygen : MonoBehaviour
             StartCoroutine(OxygenCount());
             yield break;
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         m_Oxygen--;
         oxygenText.text = "OXYGEN: " + m_Oxygen + "%";
-        if(m_Oxygen <= 12) {
+        if(m_Oxygen <= 8) {
             EndingManager.instance.DeathDueToSuffocation("YOU DIED\n DUE TO LOW OXYGEN");
             Debug.Log("Lmao Ded, due to low oxygen");
         }   

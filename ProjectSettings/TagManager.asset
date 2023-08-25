@@ -11,6 +11,9 @@ TagManager:
   - Oxygen
   - Valve
   - Extinguisher
+  - Teleport
+  - IFF
+  - Map
   layers:
   - Default
   - TransparentFX

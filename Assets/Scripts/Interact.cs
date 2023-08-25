@@ -37,6 +37,10 @@ public class Interact : MonoBehaviour
                 {
                     hit.collider.GetComponent<FireExtinguisher>().InteractWithExt();
                 }
+                if(hit.collider.gameObject.CompareTag("Map"))
+                {
+                    hit.collider.GetComponent<Map>().SetObjective();
+                }
             }
         }
         else

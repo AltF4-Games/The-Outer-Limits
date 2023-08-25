@@ -33,7 +33,7 @@ public class Pressure : MonoBehaviour
             StartCoroutine(IncreasePressure());
             yield break;
         }
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         m_Pressure-=0.4f;
         if(m_Pressure <= 1.2f) {
             EndingManager.instance.DeathDueToSuffocation("YOU DIED\n DUE TO A EXPLOSION CAUSED BY LOW PRESSURE");

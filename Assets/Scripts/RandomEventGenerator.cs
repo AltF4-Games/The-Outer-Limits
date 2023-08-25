@@ -12,6 +12,8 @@ public class RandomEventGenerator : MonoBehaviour
     public AudioClip[] clips; // 5
     public FireGenerator fireGenerator; // 6
     public RandomObstacles randomObstacles; // 7
+    public AudioClip buttonClick;
+    public AudioClip valve;
 
     private void Start ()
     {
@@ -23,28 +25,32 @@ public class RandomEventGenerator : MonoBehaviour
     {
         float random = Random.Range(timeInterval.x,timeInterval.y);
         yield return new WaitForSeconds(random);
-        int rng = Random.Range(0,7); // MAX EXCLUSIVE
+        int rng = Random.Range(0,6); // MAX EXCLUSIVE
         switch (rng)    
         {
             case 0: 
-                lightFlicker.FlickerLight(true,15f);
+                if(Random.Range(0,2) == 0){
+                    lightFlicker.FlickerLight(true,15f);
+                } else {
+                lightFlicker.ChangeColour();
+                }
                 break;
             case 1:
-                lightFlicker.ChangeColour();
+                oxygen.canDecreaseCount = true;
+                AudioManager.instance.PlayAudio(buttonClick,1.0f);
                 break;
             case 2:
-                oxygen.canDecreaseCount = true;
-                break;
-            case 3:
+                AudioManager.instance.PlayAudio(buttonClick,1.0f);
                 antiGravity.TurnOffGravity();
                 break;
-            case 4:
+            case 3:
+                AudioManager.instance.PlayAudio(valve,1.0f);
                 pressure.canDecreaseCount = true;
                 break;
-            case 5:
+            case 4:
                 fireGenerator.GenerateFire();
                 break;
-            case 6:
+            case 5:
                 randomObstacles.SpawnRandomObstacle(15f);
                 break;
             default:
