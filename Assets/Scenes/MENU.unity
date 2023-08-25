@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: e71228aad0723d846893b336dd25ff2e, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 083d4f555bafbb241bb64cb9550baf48, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 533862358}
   - component: {fileID: 533862357}
   m_Layer: 5
-  m_Name: Lore
+  m_Name: Lore Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsMenu: {fileID: 1960463385}
-  loreMenu: {fileID: 0}
+  loreMenu: {fileID: 533862355}
 --- !u!4 &960602174
 Transform:
   m_ObjectHideFlags: 0
@@ -1978,7 +1978,7 @@ MonoBehaviour:
     two years prior. Your mission is to activate this Relay and find out whether
     there exists another habitable planet where humanity can establish a new home.
 
-    
+
 
     The
     weight of humanity''s future rests squarely upon your shoulders.
