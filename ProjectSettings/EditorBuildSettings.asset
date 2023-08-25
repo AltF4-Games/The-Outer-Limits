@@ -4,5 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MENU.unity
+    guid: 880bf55812adc1f42b3c8874964e2df8
+  - enabled: 1
+    path: Assets/Scenes/GAME.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/END_NO_IFF.unity
+    guid: 56f994a6386b0aa4ab6c52cbe311a8b6
+  - enabled: 1
+    path: Assets/Scenes/END_IFF.unity
+    guid: c27bc1b51e959b74591b7852da9e5be4
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
