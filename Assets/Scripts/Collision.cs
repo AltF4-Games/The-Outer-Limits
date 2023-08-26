@@ -21,8 +21,9 @@ public class Collision : MonoBehaviour
             return;
         }
 
-        if (other.gameObject != ship && !other.transform.IsChildOf(ship.transform))
+        if (other.tag == "Enemy" || other.tag == "Planet" || other.tag == "Satellite")
         {
+            Debug.Log(other.gameObject.name);
             EndingManager.instance.Crashed("YOU DIED.\nYou crashed your spacecraft");
         }
     }

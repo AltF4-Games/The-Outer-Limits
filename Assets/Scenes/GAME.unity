@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 8
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6db9f5f5c47eb914d9e9cd8e180bc604, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -195,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jupiter
       objectReference: {fileID: 0}
+    - target: {fileID: 8031123946344478128, guid: c689d2ff6594b4c4ea3a5a88a36f3c58, type: 3}
+      propertyPath: m_TagString
+      value: Planet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -260,7 +264,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16933408}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -272,13 +276,13 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
+  m_ImplicitCom: 0
+  m_ImplicitTensor: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!65 &16933412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6571,7 +6575,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e2fc58216edf5c48a549f52ebe8dc50, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 765318417}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -7392835384543669754, guid: 2e2fc58216edf5c48a549f52ebe8dc50, type: 3}
       insertIndex: -1
@@ -8010,6 +8017,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744589255}
   m_CullTransparentMesh: 1
+--- !u!1 &765318416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 765318417}
+  m_Layer: 0
+  m_Name: Ignite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &765318417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765318416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.811, y: 0.828, z: -0.049}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300904734}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828456375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9135674197794409424, guid: 9fe044b7a98f65440a695a10c235d14c, type: 3}
@@ -8376,6 +8414,10 @@ PrefabInstance:
     - target: {fileID: 7844755897869162657, guid: 1678852f187330943bd5587e67642c80, type: 3}
       propertyPath: m_Name
       value: Mars
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844755897869162657, guid: 1678852f187330943bd5587e67642c80, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8749,7 +8791,7 @@ GameObject:
   - component: {fileID: 1006056351}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8788,7 +8830,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.77
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1006056352
 MeshRenderer:
@@ -9030,6 +9072,10 @@ PrefabInstance:
     - target: {fileID: 4453072156672236202, guid: d08f509c9a98ed648b86707a5e2fc94d, type: 3}
       propertyPath: m_Name
       value: Neptune
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453072156672236202, guid: d08f509c9a98ed648b86707a5e2fc94d, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 5600565555166621346, guid: d08f509c9a98ed648b86707a5e2fc94d, type: 3}
       propertyPath: m_Name
@@ -14329,8 +14375,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: dish
       objectReference: {fileID: 0}
+    - target: {fileID: 1721445746736936, guid: 347040970b496ba4086308c48e34652b, type: 3}
+      propertyPath: m_TagString
+      value: Satellite
+      objectReference: {fileID: 0}
     - target: {fileID: 1885570116573542, guid: 347040970b496ba4086308c48e34652b, type: 3}
       propertyPath: m_Name
+      value: Satellite
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885570116573542, guid: 347040970b496ba4086308c48e34652b, type: 3}
+      propertyPath: m_TagString
       value: Satellite
       objectReference: {fileID: 0}
     - target: {fileID: 4874934499113314, guid: 347040970b496ba4086308c48e34652b, type: 3}
@@ -15560,10 +15614,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Oxygen: 100
   oxygen_bar: {fileID: 1446568750}
-  profile: {fileID: 11400000, guid: e00d951d5404b744695b5286a19cfdd6, type: 2}
   wheeze: {fileID: 8300000, guid: ebb2dc4d27cd9ac46abd6896f415f638, type: 3}
   buttonPress: {fileID: 8300000, guid: 949b91744487252458759531b66d5592, type: 3}
+  warning: {fileID: 0}
   oxygenText: {fileID: 271894237}
+  warningText: {fileID: 0}
   canDecreaseCount: 0
 --- !u!1 &1446568748
 GameObject:
@@ -15962,6 +16017,10 @@ PrefabInstance:
     - target: {fileID: 6475519781151030441, guid: 3e332931b1b92304299cf02f743c0d6a, type: 3}
       propertyPath: m_Name
       value: Uranus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475519781151030441, guid: 3e332931b1b92304299cf02f743c0d6a, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 8928296600354232173, guid: 3e332931b1b92304299cf02f743c0d6a, type: 3}
       propertyPath: m_RootOrder
@@ -19955,6 +20014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Abandoned Spacecraft
       objectReference: {fileID: 0}
+    - target: {fileID: 1478763926639530, guid: e5078c17b52bb014882bc0363c060079, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4050943347418754, guid: e5078c17b52bb014882bc0363c060079, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -21538,7 +21601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6603f16bbc30e4abe96e7cfd34f7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: {x: 60, y: 100}
+  timeInterval: {x: 10, y: 20}
   lightFlicker: {fileID: 1282619050}
   oxygen: {fileID: 1437337219}
   antiGravity: {fileID: 1990010570}
@@ -21584,8 +21647,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocations:
-  - {x: -1.991275, y: 0.1751556, z: -0.7517811}
-  - {x: -5.12, y: 0.212, z: -0.587}
+  - {fileID: 80586302}
+  - {fileID: 765318417}
   firePrefab: {fileID: 260234784939038991, guid: 338c41d758e80d64aa3258bf75539926, type: 3}
   ship: {fileID: 1633187890}
 --- !u!114 &2058053741
@@ -21722,6 +21785,10 @@ PrefabInstance:
     - target: {fileID: 4940861962644282588, guid: 34eb7592704217542b545e05ca2040b4, type: 3}
       propertyPath: m_Name
       value: Saturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940861962644282588, guid: 34eb7592704217542b545e05ca2040b4, type: 3}
+      propertyPath: m_TagString
+      value: Planet
       objectReference: {fileID: 0}
     - target: {fileID: 5351487381951522707, guid: 34eb7592704217542b545e05ca2040b4, type: 3}
       propertyPath: m_Name
@@ -21989,8 +22056,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pressure: 14.696
   squeak: {fileID: 8300000, guid: bd2b8a1c13c6fc042a7ad44eba69c857, type: 3}
+  warning: {fileID: 0}
   animation: {fileID: 6622807380828515474}
   pressureText: {fileID: 1910324833}
+  warningText: {fileID: 0}
   canDecreaseCount: 0
 --- !u!111 &6622807380828515474
 Animation:

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6db9f5f5c47eb914d9e9cd8e180bc604, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1201,10 +1201,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Oxygen: 100
   oxygen_bar: {fileID: 309747845}
-  profile: {fileID: 11400000, guid: e00d951d5404b744695b5286a19cfdd6, type: 2}
   wheeze: {fileID: 8300000, guid: ebb2dc4d27cd9ac46abd6896f415f638, type: 3}
   buttonPress: {fileID: 8300000, guid: 949b91744487252458759531b66d5592, type: 3}
+  warning: {fileID: 0}
   oxygenText: {fileID: 1018418612}
+  warningText: {fileID: 0}
   canDecreaseCount: 0
 --- !u!114 &343361664
 MonoBehaviour:
@@ -7707,8 +7708,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pressure: 1
   squeak: {fileID: 8300000, guid: bd2b8a1c13c6fc042a7ad44eba69c857, type: 3}
+  warning: {fileID: 0}
   animation: {fileID: 0}
   pressureText: {fileID: 2049646765}
+  warningText: {fileID: 0}
   canDecreaseCount: 0
 --- !u!114 &807622236
 MonoBehaviour:

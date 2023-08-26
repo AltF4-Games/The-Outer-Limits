@@ -6,7 +6,7 @@ public class Fire : MonoBehaviour
 {
     private Oxygen oxygen;
     public float health = 100f;
-    private float timer = 20f;
+    public float timer = 20f;
     private bool canExplode = true;
 
     private void Start()
@@ -34,6 +34,6 @@ public class Fire : MonoBehaviour
     private void EndGame()
     {
         if(!canExplode) return;
-        EndingManager.instance.DeathDueToSuffocation("YOU DIED\n DUE TO A EXPLOSION");
+        EndingManager.instance.DeathDueToSuffocation("YOU DIED\n YOUR SPACECRAFT EXPLODED DUE TO FIRE");
     }
 }

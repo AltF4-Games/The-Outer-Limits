@@ -1,29 +1,23 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Rendering.PostProcessing;
 using TMPro;
 
 public class Oxygen : MonoBehaviour
 {
     public int m_Oxygen = 100;
     public Image oxygen_bar;
-    public PostProcessProfile profile;
     public AudioClip wheeze;
     public AudioClip buttonPress;
+    public AudioClip warning;
     public TextMeshProUGUI oxygenText;
+    public TextMeshProUGUI warningText;
     public bool canDecreaseCount = false;
-    private Vignette vignette;
     private bool wheezed = false;
 
     private void Start()
     {
         StartCoroutine(OxygenCount());
-        if (vignette != null)
-        {
-            vignette.intensity.value = 0.44f;
-        }
-        profile.TryGetSettings(out vignette);
     }
 
     public void ToggleOxygen()
@@ -42,30 +36,31 @@ public class Oxygen : MonoBehaviour
             StartCoroutine(OxygenCount());
             yield break;
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         m_Oxygen--;
         if(m_Oxygen <= 8) {
             EndingManager.instance.DeathDueToSuffocation("YOU DIED\n DUE TO LOW OXYGEN");
             Debug.Log("Lmao Ded, due to low oxygen");
         }   
         if(m_Oxygen <= 25) {
-            if (vignette != null)
-            {
-                vignette.intensity.value = 0.75f;
-            }
             if(wheezed == false) {
-                AudioManager.instance.PlayAudio(wheeze,1.0f);
+                AudioManager.instance.PlayAudio(warning,1.0f);
+                warningText.text = "[WARNING] : OXYGEN TOO LOW!";
+                Invoke("ClearText",10f);
                 wheezed = true;
             }
         }
         else
         {
-            if (vignette != null)
-            {
-                vignette.intensity.value = 0.44f;
-            }
+            wheezed = false;
         }
         oxygen_bar.fillAmount = m_Oxygen/100f;
         StartCoroutine(OxygenCount());
+    }
+
+    private void ClearText()
+    {
+        warningText.text = "";
+        wheezed = false;
     }
 }

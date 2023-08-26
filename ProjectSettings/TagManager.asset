@@ -14,6 +14,8 @@ TagManager:
   - Teleport
   - IFF
   - Map
+  - Planet
+  - Satellite
   layers:
   - Default
   - TransparentFX
