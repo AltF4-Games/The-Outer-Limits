@@ -8132,7 +8132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
-      value: 5000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_RenderingPath
@@ -21547,7 +21547,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fffd79e5214cf854e996039341de735b, type: 3}
   - {fileID: 8300000, guid: 1d2743a682e81864f990cbe25ab5b24a, type: 3}
   - {fileID: 8300000, guid: 6a67766fc87c3dd429994202043efc45, type: 3}
-  - {fileID: 8300000, guid: 2fc46114f28c7024789ea77faefc3a21, type: 3}
+  - {fileID: 8300000, guid: 98bc6bcad137d114ebf54172c3987959, type: 3}
   - {fileID: 8300000, guid: afe51c4a5bfe6ea4f81991f9c55d8d05, type: 3}
   - {fileID: 8300000, guid: b44ae4feddf4b694c8bd4f3e094f89d6, type: 3}
   - {fileID: 8300000, guid: fdc2dfabe56ae6b4ea602524cfaf1930, type: 3}
@@ -21987,7 +21987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc2de268b6cc7f46b5932b44139f882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Pressure: 1
+  m_Pressure: 14.696
   squeak: {fileID: 8300000, guid: bd2b8a1c13c6fc042a7ad44eba69c857, type: 3}
   animation: {fileID: 6622807380828515474}
   pressureText: {fileID: 1910324833}
@@ -22150,7 +22150,7 @@ MonoBehaviour:
     FieldOfView: 50
     OrthographicSize: 10
     NearClipPlane: 0.2
-    FarClipPlane: 5000
+    FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
