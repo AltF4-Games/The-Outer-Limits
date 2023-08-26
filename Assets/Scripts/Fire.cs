@@ -34,6 +34,6 @@ public class Fire : MonoBehaviour
     private void EndGame()
     {
         if(!canExplode) return;
-        EndingManager.instance.DeathDueToSuffocation("YOU DIED\n YOUR SPACECRAFT EXPLODED DUE TO FIRE");
+        EndingManager.instance.ExplosionEnding("YOU DIED\n YOUR SPACECRAFT EXPLODED DUE TO FIRE");
     }
 }

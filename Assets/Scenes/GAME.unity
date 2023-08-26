@@ -581,7 +581,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1151388028547126963, guid: f8b6f8c42fef2034f85afe65333912d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1650366245}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: f8b6f8c42fef2034f85afe65333912d4, type: 3}
       insertIndex: -1
@@ -19548,6 +19551,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1650366244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1650366245}
+  m_Layer: 0
+  m_Name: Fire Pos Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1650366245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650366244}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.248, y: -0.268, z: -0.079}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1708883585}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1675994798
 GameObject:
   m_ObjectHideFlags: 0
@@ -19677,6 +19711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDescription: Gravity Generators
+--- !u!4 &1708883585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1151388028547126963, guid: f8b6f8c42fef2034f85afe65333912d4, type: 3}
+  m_PrefabInstance: {fileID: 80586301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1735566002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21647,7 +21686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocations:
-  - {fileID: 80586302}
+  - {fileID: 1650366245}
   - {fileID: 765318417}
   firePrefab: {fileID: 260234784939038991, guid: 338c41d758e80d64aa3258bf75539926, type: 3}
   ship: {fileID: 1633187890}

@@ -32,5 +32,6 @@ public class MainMenu : MonoBehaviour
     public void NewGame()
     {
         loreMenu.SetActive(true);
+        Debug.Log("NEW GAME...");
     }
 }

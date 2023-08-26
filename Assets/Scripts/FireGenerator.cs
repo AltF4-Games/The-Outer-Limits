@@ -8,8 +8,14 @@ public class FireGenerator : MonoBehaviour
     [SerializeField] private GameObject firePrefab;
     [SerializeField] private GameObject ship;
 
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+            GenerateFire();
+    }
+
     public void GenerateFire()
     {
-        GameObject fire = Instantiate(firePrefab,spawnLocations[Random.Range(0,spawnLocations.Length)].position,Quaternion.identity,ship.transform);
+        GameObject fire = Instantiate(firePrefab,spawnLocations[Random.Range(0,spawnLocations.Length)].position,Quaternion.identity,spawnLocations[Random.Range(0,spawnLocations.Length)]);
     }
 }
