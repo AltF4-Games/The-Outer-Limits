@@ -7331,7 +7331,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: fec182a34081bd14892db0f046b33e36, type: 2}
   m_audioClip: {fileID: 8300000, guid: 898fe01b4a442e34f9fcaae63224d69c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.222
+  m_Volume: 0.333
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8132,7 +8132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: far clip plane
-      value: 1000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       propertyPath: m_RenderingPath
@@ -8204,7 +8204,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: fec182a34081bd14892db0f046b33e36, type: 2}
   m_audioClip: {fileID: 8300000, guid: 003eee2b1e603d348beb1e583a583ba3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.343
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20254,7 +20254,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: fec182a34081bd14892db0f046b33e36, type: 2}
   m_audioClip: {fileID: 8300000, guid: fa729ee66ee51914abe5bd4c97d5ab63, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.087
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -22150,7 +22150,7 @@ MonoBehaviour:
     FieldOfView: 50
     OrthographicSize: 10
     NearClipPlane: 0.2
-    FarClipPlane: 1000
+    FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
