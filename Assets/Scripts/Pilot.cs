@@ -16,6 +16,7 @@ public class Pilot : MonoBehaviour
     public GameObject itemDescription;
     public TextMeshProUGUI subText;
     public KeyCode key = KeyCode.Escape;
+    public KeyCode key2 = KeyCode.E;
     private bool inSeat = false;
 
     public void SwitchViews(bool val)
@@ -47,7 +48,7 @@ public class Pilot : MonoBehaviour
     {
         if(inSeat) 
         {
-            if(Input.GetKey(key)) 
+            if(Input.GetKeyDown(key) || Input.GetKeyDown(key2)) 
             {
                 SwitchViews(false);
             }
