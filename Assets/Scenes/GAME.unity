@@ -5775,6 +5775,7 @@ Transform:
   m_Children:
   - {fileID: 1531007535}
   - {fileID: 1282619049}
+  - {fileID: 1126535954}
   m_Father: {fileID: 1633187896}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14595,7 +14596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1633187896}
+  m_Father: {fileID: 186772749}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!215 &1126535955
@@ -15616,9 +15617,9 @@ MonoBehaviour:
   oxygen_bar: {fileID: 1446568750}
   wheeze: {fileID: 8300000, guid: ebb2dc4d27cd9ac46abd6896f415f638, type: 3}
   buttonPress: {fileID: 8300000, guid: 949b91744487252458759531b66d5592, type: 3}
-  warning: {fileID: 0}
+  warning: {fileID: 8300000, guid: a92219ca9a8a0af46b18d1a678ea689b, type: 3}
   oxygenText: {fileID: 271894237}
-  warningText: {fileID: 0}
+  warningText: {fileID: 2056091716}
   canDecreaseCount: 0
 --- !u!1 &1446568748
 GameObject:
@@ -19411,7 +19412,6 @@ Transform:
   - {fileID: 16933409}
   - {fileID: 85953593}
   - {fileID: 990107185}
-  - {fileID: 1126535954}
   - {fileID: 714689279}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -21601,7 +21601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6603f16bbc30e4abe96e7cfd34f7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: {x: 10, y: 20}
+  timeInterval: {x: 60, y: 100}
   lightFlicker: {fileID: 1282619050}
   oxygen: {fileID: 1437337219}
   antiGravity: {fileID: 1990010570}
@@ -22056,10 +22056,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pressure: 14.696
   squeak: {fileID: 8300000, guid: bd2b8a1c13c6fc042a7ad44eba69c857, type: 3}
-  warning: {fileID: 0}
+  warning: {fileID: 8300000, guid: a92219ca9a8a0af46b18d1a678ea689b, type: 3}
   animation: {fileID: 6622807380828515474}
   pressureText: {fileID: 1910324833}
-  warningText: {fileID: 0}
+  warningText: {fileID: 2056091716}
   canDecreaseCount: 0
 --- !u!111 &6622807380828515474
 Animation:
