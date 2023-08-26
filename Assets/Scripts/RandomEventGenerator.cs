@@ -38,14 +38,14 @@ public class RandomEventGenerator : MonoBehaviour
                 break;
             case 1:
                 oxygen.canDecreaseCount = true;
-                AudioManager.instance.PlayAudio(buttonClick,1.0f,true,100f,oxygen.transform.position);
+                AudioManager.instance.PlayAudio(buttonClick,0.1f,true,100f,oxygen.transform.position);
                 break;
             case 2:
-                AudioManager.instance.PlayAudio(buttonClick,1.0f,true,100f,antiGravity.transform.position);
+                AudioManager.instance.PlayAudio(buttonClick,0.1f,true,100f,antiGravity.transform.position);
                 antiGravity.TurnOffGravity();
                 break;
             case 3:
-                AudioManager.instance.PlayAudio(valve,1.0f,true,100f,pressure.transform.position);
+                AudioManager.instance.PlayAudio(valve,0.5f,true,100f,pressure.transform.position);
                 pressure.canDecreaseCount = true;
                 break;
             case 4:
