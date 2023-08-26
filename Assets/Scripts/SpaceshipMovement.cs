@@ -85,6 +85,6 @@ public class SpaceshipMovement : MonoBehaviour
 
     private void UpdateCoordsText()
     {
-        coordText.text = "X:" + Math.Round(transform.position.x) + "\nY:" + Math.Round(transform.position.z) + "\nA:" + Math.Round(transform.rotation.eulerAngles.x);   
+        coordText.text = "X:" + Math.Round(transform.position.x) + "\nY:" + Math.Round(transform.position.z) + "\nA:" + Math.Round(transform.rotation.eulerAngles.y);   
     }
 }

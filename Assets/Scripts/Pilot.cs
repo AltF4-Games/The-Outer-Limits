@@ -13,6 +13,7 @@ public class Pilot : MonoBehaviour
     public SpaceshipMovement movement;
     public StarterAssets.FirstPersonController controller;
     public Interact interact;
+    public GameObject itemDescription;
     public TextMeshProUGUI subText;
     public KeyCode key = KeyCode.Escape;
     private bool inSeat = false;
@@ -25,6 +26,7 @@ public class Pilot : MonoBehaviour
             movement.canDrive = true;
             controller.enabled = false;
             interact.enabled = false;
+            itemDescription.SetActive(false);
         } 
         else {
             if(movement.autoPilotOn == true){
@@ -37,6 +39,7 @@ public class Pilot : MonoBehaviour
             inSeat = false;
             movement.canDrive = false;
             interact.enabled = true;
+            itemDescription.SetActive(true);
         }
     }
 

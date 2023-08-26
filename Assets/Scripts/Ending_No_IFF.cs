@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Ending_No_IFF : MonoBehaviour
 {
-public TextMeshProUGUI subText;
+    public TextMeshProUGUI subText;
     public AudioClip scareClip;
     public GameObject reaper;
     public GameObject blackImage;
@@ -15,6 +15,8 @@ public TextMeshProUGUI subText;
     private void Start()
     {
         StartCoroutine(Ending());
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private IEnumerator Ending()

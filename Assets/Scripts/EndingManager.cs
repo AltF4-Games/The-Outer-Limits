@@ -18,6 +18,8 @@ public class EndingManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void ExplosionEnding(string deathMessage)

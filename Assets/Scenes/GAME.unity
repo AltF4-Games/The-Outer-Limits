@@ -7657,6 +7657,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 319d5043a08f7bc4999977dbbf611d47, type: 3}
   m_PrefabInstance: {fileID: 712484707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &714689278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 714689279}
+  m_Layer: 0
+  m_Name: 3D Audio Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &714689279
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714689278}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.326, y: 1.172, z: -0.088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633187896}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721246950
 GameObject:
   m_ObjectHideFlags: 0
@@ -8023,6 +8054,7 @@ MonoBehaviour:
   movement: {fileID: 1633187897}
   controller: {fileID: 1126059487}
   interact: {fileID: 1741211415}
+  itemDescription: {fileID: 1075488358}
   subText: {fileID: 2056091716}
   key: 27
 --- !u!114 &828456384
@@ -8124,6 +8156,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1741211415}
+    - targetCorrespondingSourceObject: {fileID: 9005220659476430823, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1741211423}
   m_SourcePrefab: {fileID: 100100000, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
 --- !u!1 &836254423
 GameObject:
@@ -14477,6 +14512,71 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1126535953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1126535954}
+  - component: {fileID: 1126535955}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1126535954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126535953}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.04, y: 1.46, z: -1.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633187896}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!215 &1126535955
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126535953}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 6.629877, y: 3.8490305, z: 4.557383}
+  m_BoxOffset: {x: -0.430295, y: -0.4630909, z: -0.35237074}
+  m_NearClip: 0.3
+  m_FarClip: 100
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &1136782777
 GameObject:
   m_ObjectHideFlags: 0
@@ -19252,6 +19352,8 @@ Transform:
   - {fileID: 16933409}
   - {fileID: 85953593}
   - {fileID: 990107185}
+  - {fileID: 1126535954}
+  - {fileID: 714689279}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19269,7 +19371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   autoPilotSpeed: 20
-  rotationSpeed: 10
+  rotationSpeed: 20
   damping: 0.9
   shake: {fileID: 239611000}
   particleSystem: {fileID: 169689151}
@@ -19696,6 +19798,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
   m_PrefabInstance: {fileID: 829416437}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741211423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741211409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a879e317c20b0d41a9a56f1a97f4cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ApplyMethod: 0
+  SampleCount: 2
+  PerPixelNormals: 2
+  Intensity: 1
+  Tint: {r: 0, g: 0, b: 0, a: 1}
+  Radius: 2
+  PowerExponent: 1.8
+  Bias: 0.05
+  Thickness: 1
+  Downsample: 1
+  CacheAware: 1
+  FadeEnabled: 0
+  FadeStart: 100
+  FadeLength: 50
+  FadeToIntensity: 0
+  FadeToTint: {r: 0, g: 0, b: 0, a: 1}
+  FadeToRadius: 2
+  FadeToPowerExponent: 1
+  FadeToThickness: 1
+  BlurEnabled: 1
+  BlurRadius: 3
+  BlurPasses: 1
+  BlurSharpness: 15
+  FilterEnabled: 1
+  FilterDownsample: 1
+  FilterBlending: 0.8
+  FilterResponse: 0.5
 --- !u!1 &1749346011
 GameObject:
   m_ObjectHideFlags: 0
@@ -21377,6 +21518,7 @@ GameObject:
   - component: {fileID: 2058053738}
   - component: {fileID: 2058053740}
   - component: {fileID: 2058053741}
+  - component: {fileID: 2058053742}
   m_Layer: 0
   m_Name: Random Event Manager
   m_TagString: Untagged
@@ -21396,7 +21538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6603f16bbc30e4abe96e7cfd34f7f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInterval: {x: 80, y: 120}
+  timeInterval: {x: 60, y: 100}
   lightFlicker: {fileID: 1282619050}
   oxygen: {fileID: 1437337219}
   antiGravity: {fileID: 1990010570}
@@ -21413,6 +21555,7 @@ MonoBehaviour:
   randomObstacles: {fileID: 2058053741}
   buttonClick: {fileID: 8300000, guid: 949b91744487252458759531b66d5592, type: 3}
   valve: {fileID: 8300000, guid: bd2b8a1c13c6fc042a7ad44eba69c857, type: 3}
+  audioLocation: {fileID: 714689279}
 --- !u!4 &2058053739
 Transform:
   m_ObjectHideFlags: 0
@@ -21464,6 +21607,23 @@ MonoBehaviour:
   - TURN BACK!
   obstaclePrefab: {fileID: 5808753222262988999, guid: 3bd5c8000e6f19a409708b6f8f8438ad, type: 3}
   shipT: {fileID: 1633187896}
+--- !u!114 &2058053742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058053737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f697b6c532551a4c8f3b4f495bddf22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  subTitle: As you approach the mass relay, please be aware that it constitutes a
+    point of no return. According to our scientists, the mass relay operates exclusively
+    in a one-way manner.
+  voiceClip: {fileID: 8300000, guid: eb862aeb45a1c454c884fc09b55e1557, type: 3}
+  subText: {fileID: 2056091716}
 --- !u!1 &2062747798
 GameObject:
   m_ObjectHideFlags: 0
@@ -21757,6 +21917,7 @@ GameObject:
   - component: {fileID: 6622807380828515471}
   - component: {fileID: 6622807380828515472}
   - component: {fileID: 6622807380828515473}
+  - component: {fileID: 6622807380828515474}
   m_Layer: 7
   m_Name: Valve
   m_TagString: Valve
@@ -21828,8 +21989,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pressure: 1
   squeak: {fileID: 8300000, guid: bd2b8a1c13c6fc042a7ad44eba69c857, type: 3}
+  animation: {fileID: 6622807380828515474}
   pressureText: {fileID: 1910324833}
   canDecreaseCount: 0
+--- !u!111 &6622807380828515474
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424467397363855824}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e428102d883f7d94397f215e7c34ec3a, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e428102d883f7d94397f215e7c34ec3a, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &8262778107239583865
 PrefabInstance:
   m_ObjectHideFlags: 0

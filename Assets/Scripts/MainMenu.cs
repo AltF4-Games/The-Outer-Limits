@@ -8,6 +8,12 @@ public class MainMenu : MonoBehaviour
     public GameObject creditsMenu;
     public GameObject loreMenu;
 
+    private void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     public void PlayButton()
     {
         SceneManager.LoadScene(1);

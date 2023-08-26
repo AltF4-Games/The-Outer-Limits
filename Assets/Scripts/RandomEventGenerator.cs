@@ -14,6 +14,7 @@ public class RandomEventGenerator : MonoBehaviour
     public RandomObstacles randomObstacles; // 7
     public AudioClip buttonClick;
     public AudioClip valve;
+    public Transform audioLocation;
 
     private void Start ()
     {
@@ -37,14 +38,14 @@ public class RandomEventGenerator : MonoBehaviour
                 break;
             case 1:
                 oxygen.canDecreaseCount = true;
-                AudioManager.instance.PlayAudio(buttonClick,1.0f);
+                AudioManager.instance.PlayAudio(buttonClick,1.0f,true,100f,oxygen.transform.position);
                 break;
             case 2:
-                AudioManager.instance.PlayAudio(buttonClick,1.0f);
+                AudioManager.instance.PlayAudio(buttonClick,1.0f,true,100f,antiGravity.transform.position);
                 antiGravity.TurnOffGravity();
                 break;
             case 3:
-                AudioManager.instance.PlayAudio(valve,1.0f);
+                AudioManager.instance.PlayAudio(valve,1.0f,true,100f,pressure.transform.position);
                 pressure.canDecreaseCount = true;
                 break;
             case 4:
@@ -64,7 +65,12 @@ public class RandomEventGenerator : MonoBehaviour
         float random = Random.Range(timeInterval.x,timeInterval.y);
         yield return new WaitForSeconds(random);
         int randomClip = Random.Range(0,clips.Length);
+        if(randomClip == 4 || randomClip == 5 || randomClip == 1)
+        {
+            AudioManager.instance.PlayAudio(clips[randomClip],1.0f,true,100f,audioLocation.position);
+        }
         AudioManager.instance.PlayAudio(clips[randomClip],1.0f);
+
         StartCoroutine(RandomNoises());
     }
 
