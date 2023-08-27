@@ -48,7 +48,7 @@ public class Pilot : MonoBehaviour
     {
         if(inSeat) 
         {
-            if(Input.GetKeyDown(key) || Input.GetKeyDown(key2)) 
+            if(Input.GetKeyDown(key2)) 
             {
                 SwitchViews(false);
             }
